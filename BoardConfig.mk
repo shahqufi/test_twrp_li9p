@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/tecno/LI9
+DEVICE_PATH := device/tecno/li9
 
 TW_FORCE_SELINUX_PERMISSIVE := true
 
