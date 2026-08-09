@@ -21,7 +21,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit from TECNO-LI9 device
 $(call inherit-product, device/tecno/li9/device.mk)
 
-PRODUCT_DEVICE := LI9
+PRODUCT_DEVICE := li9
 PRODUCT_NAME := twrp_li9
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO LI9
