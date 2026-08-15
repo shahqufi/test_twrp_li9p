@@ -36,7 +36,7 @@ tr_overlayfs    /tr_overlayfs   erofs    ro              wait,slotselect,logical
 tr_overlayfs    /tr_overlayfs   ext4     ro              wait,slotselect,logical,avb_keys=/vendor/etc/vconfig/tran_avb.pubkey,nofail
 
 # Data partitions (FBE decryption support)
-/dev/block/by-name/metadata    /metadata   f2fs    noatime,nosuid,nodev,discard                       wait,check
+/dev/block/by-name/metadata    /metadata   ext4    noatime,nosuid,nodev,discard                       wait,check
 /dev/block/by-name/userdata    /data       f2fs    noatime,nosuid,nodev,discard,noflush_merge         wait,check,resize,quota,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 
 # Boot & firmware partitions (flashing)
