@@ -6,7 +6,4 @@ service tee-service /vendor/bin/hw/vendor.trustonic.tee-service
     user system
     group system
 
-# We use the property set by Trustonic daemon so mcOpenSession is available
-# and DrAndroid is loaded
-on property:ro.vendor.trustonic.ready=true
-    start tee-service
+# Disabled in recovery until Trustonic AIDL libraries are available.
