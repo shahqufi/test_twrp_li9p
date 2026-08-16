@@ -37,8 +37,7 @@ tr_overlayfs    /tr_overlayfs   ext4     ro              wait,slotselect,logical
 
 # Data partitions (FBE decryption support)
 /dev/block/by-name/metadata    /metadata   ext4    noatime,nosuid,nodev,discard                       wait,check
-/dev/block/by-name/userdata    /data       f2fs    noatime,nosuid,nodev,discard,noflush_merge         wait,check,resize,quota,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
-
+/dev/block/by-name/userdata    /data       f2fs    noatime,nosuid,nodev,discard,noflush_merge,inlinecrypt    wait,check,resize,quota,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
 # Boot & firmware partitions (flashing)
 /dev/block/by-name/boot           /boot           emmc    defaults    slotselect
 /dev/block/by-name/dtbo           /dtbo           emmc    defaults    slotselect
